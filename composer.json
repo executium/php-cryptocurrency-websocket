@@ -1,0 +1,8 @@
+{
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "react/socket": "^1.5",
+    "ratchet/pawl": "^0.3.5"
+  }
+}
