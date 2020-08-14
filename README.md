@@ -2,6 +2,18 @@
 ![crypto websocket](https://i.imgur.com/VGeP4EG.png)
 This PHP cryptocurrency websocket connects you to the executium cryptocurrency websocket network. This repository can be used for an array of projects where you require a live market feed.
 
+- [How to install](#how-to-install)
+- Variables
+    - [Host and Port](#host-and-port)
+    - [Side](#side)
+    - [Symbol](#symbol)
+    - [Exchange](#exchange)
+    - [Orderbook Level](#orderbook-level)
+- [How to find out what is supported](#how-to-find-out-what-is-supported)
+- [Dealing with the output](#dealing-with-the-output)
+- [Online example](#online-example)
+- [License](#license-related-to-code)
+
 ## How to install
 1. Clone this repository
 
