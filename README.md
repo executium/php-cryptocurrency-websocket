@@ -72,6 +72,26 @@ https://marketdata.executium.com/api/v2/system/symbols?exchange=bitfinex
 ```
 
 ## Dealing with the output
+If you are looking to capture and manipulate the output then the following passage is recommended:
+
+```php
+function orderbook_pushed($match)
+{
+    $data = json_decode($match[2], true);
+
+    if($data[0] == 'dp')
+    {
+        $d = explode(",", trim($data[1]['d'], "[]"));
+        $price = $d[0];
+        $quantity = $d[1];
+        $ago = $d[2];
+        echo "n: {$data[1]['n']}, price: {$price}, quantity: {$quantity}, time: {$ago}" . PHP_EOL;
+    }
+}
+
+```
+
+When `dp` is passed this will contain the desired data. For your developments it is recommended this is the area in which you modify. Within the `orderbook_pushed()` function you can manipulate the output as you see fit.
 
 ## Online Example
 You can view an online example of the javascript websocket at [https://marketdata.executium.com/realtime-cryptocurrency-market-prices-websockets/](https://marketdata.executium.com/realtime-cryptocurrency-market-prices-websockets/). The code related to the javascript can be found [in this repository](https://github.com/executium/real-time-cryptocurrency-market-prices-websocket).
