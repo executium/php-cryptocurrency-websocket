@@ -3,7 +3,8 @@
 This PHP cryptocurrency websocket connects you to the executium cryptocurrency websocket network. This repository can be used for an array of projects where you require a live market feed.
 
 ## How to use
-This 
+The folling variables are highlighted for easy customization.
+
 ```php
 $port = 2083;
 $host = 'wss-public.executium.com';
