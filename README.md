@@ -12,6 +12,7 @@ This PHP cryptocurrency websocket connects you to the executium cryptocurrency w
 - [How to find out what is supported](#how-to-find-out-what-is-supported)
 - [Dealing with the output](#dealing-with-the-output)
 - [Online example](#online-example)
+- [Fair usage](https://github.com/executium/real-time-cryptocurrency-market-prices-websocket/blob/master/FAIR-USAGE.md)
 - [License](#license-related-to-code)
 
 ## How to install
