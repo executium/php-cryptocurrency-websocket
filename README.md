@@ -2,6 +2,51 @@
 ![crypto websocket](https://i.imgur.com/VGeP4EG.png)
 This PHP cryptocurrency websocket connects you to the executium cryptocurrency websocket network. This repository can be used for an array of projects where you require a live market feed.
 
+## How to install
+1. Clone this repository
+
+```
+git clone  https://github.com/executium/php-cryptocurrency-websocket.git  
+```
+
+2. The `cd` into the directory and install the dependencies using composer. 
+```
+cd php-cryptocurrency-websocket/
+composer install
+```
+
+3. Then finally run the script
+```
+php index.php
+```
+
+Finally, you should see an output similar to the following:
+```
+GET request to https://wss-public.executium.com:2083/socket.io/?EIO=3&transport=polling
+Cookie: __cfduid=d344885355ebe04675bc7d57b5f84ad8e1597399433; io=YUMWpgTk5CwoXI7fAAKr
+trying decode: 96:0{"sid":"YUMWpgTk5CwoXI7fAAKr","upgrades":["websocket"],"pingInterval":25000,"pingTimeout":5000}2:40
+trying encode: ["message",{"req":"binance","s":"btcusdt","o":"asks-binance-btcusdt"}]
+POST request to https://wss-public.executium.com:2083/socket.io/?EIO=3&transport=polling&sid=YUMWpgTk5CwoXI7fAAKr
+GET request to https://wss-public.executium.com:2083/socket.io/?EIO=3&transport=polling&sid=YUMWpgTk5CwoXI7fAAKr
+trying decode: 91:42["obreq",{"n":"8e8e16d7.executium.net","s":"binance-btcusdt","o":"asks-binance-btcusdt"}]
+GET request to https://8e8e16d7.executium.net:2083/socket.io/?EIO=3&transport=polling
+trying decode: 96:0{"sid":"N6AXZMacovQWFgsXAApl","upgrades":["websocket"],"pingInterval":25000,"pingTimeout":5000}2:40
+trying encode: ["message",{"subscribe":"asks\/binance-btcusdt-1"}]
+POST request to https://8e8e16d7.executium.net:2083/socket.io/?EIO=3&transport=polling&sid=N6AXZMacovQWFgsXAApl
+n: asks/binance-btcusdt-1, price: 11694.23, quantity: 2.411781, time: 1597399435591
+n: asks/binance-btcusdt-1, price: 11693.5, quantity: 2.794828, time: 1597399436682
+n: asks/binance-btcusdt-1, price: 11693.5, quantity: 2.734814, time: 1597399437675
+n: asks/binance-btcusdt-1, price: 11693.5, quantity: 2.704761, time: 1597399438632
+n: asks/binance-btcusdt-1, price: 11693.39, quantity: 3.107546, time: 1597399439674
+n: asks/binance-btcusdt-1, price: 11693.39, quantity: 2.955887, time: 1597399440660
+```
+
+
+NOTE: This script uses `php-curl`, to install use the following command
+```
+apt install php-curl
+```
+
 ## How to use
 The folling variables are highlighted for easy customization.
 
